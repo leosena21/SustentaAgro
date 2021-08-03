@@ -1,0 +1,16 @@
+.form {
+  width: 50%;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.margin {
+  margin-top: 2%;
+}
+
+.grid {
+  display: grid;
+}
