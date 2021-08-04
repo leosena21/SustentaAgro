@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'cadagro',
     loadChildren: () => import('./pages/cadagro/cadagro.module').then( m => m.CadagroPageModule)
+  },
+  {
+    path: 'cadprof',
+    loadChildren: () => import('./pages/cadprof/cadprof.module').then( m => m.CadprofPageModule)
   }
 ];
 

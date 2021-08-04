@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MenuController, NavController } from '@ionic/angular';
+import { AlertController, MenuController, NavController } from '@ionic/angular';
+import { AlertService } from 'src/app/services/alert.service';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,8 @@ export class LoginPage implements OnInit {
   constructor(
     private navCtroller: NavController,
     private formBuilder: FormBuilder,
-    private menuController: MenuController
+    private menuController: MenuController,
+    private alertService: AlertService
   ) {
     
     this.formGroup = this.formBuilder.group({
@@ -28,8 +30,24 @@ export class LoginPage implements OnInit {
     this.menuController.enable(false);
   }
 
-  handleLogin(){
-    console.log(this.formGroup);
-    // this.navCtroller.navigateRoot("cadagro");
+  async handleCad() {
+    this.alertService.editAlert(
+      "Informação", 
+      "Deseja criar qual conta?", 
+      [
+        {
+          text: 'Agricultor',
+          handler: () => {
+            this.navCtroller.navigateRoot("cadagro");
+          }
+        },
+        {
+          text: 'Professor',
+          handler: () => {
+            console.log('Confirm Okay');
+          }
+        }
+      ]
+    )
   }
 }

@@ -14,7 +14,7 @@
     <p class="danger" *ngIf="formGroup.controls.senha.dirty && formGroup.controls.senha.errors" margin-left>Senha inválida</p>
     <div class="grid">
       <ion-button block type="submit" [disabled]="formGroup.invalid" class="margin">Login</ion-button>
-      <ion-button block class="margin">Criar conta</ion-button>
+      <ion-button block class="margin"(click)="handleCad()">Criar conta</ion-button>
     </div>
   </form>
 </ion-content>
