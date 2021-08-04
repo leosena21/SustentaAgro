@@ -14,7 +14,6 @@ export class AlertService {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
       header: 'Informação: ',
-      subHeader: 'Subtitle',
       message: msg,
       buttons: ['OK']
     });
