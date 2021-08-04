@@ -44,7 +44,7 @@ export class LoginPage implements OnInit {
         {
           text: 'Professor',
           handler: () => {
-            console.log('Confirm Okay');
+            this.navCtroller.navigateRoot("cadprof");
           }
         }
       ]

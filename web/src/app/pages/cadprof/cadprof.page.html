@@ -1,9 +1,35 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>cadprof</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header title="Cadastro professor" [showMenuButton]="false"></app-header>
+
 
 <ion-content>
-
+  <form [formGroup]="formGroup" (ngSubmit)="handleLogin(); $event.preventDefault()" class="form">
+    <ion-item>
+      <ion-label stacked>Nome*</ion-label>
+      <ion-input formControlName="nome" type="text"></ion-input>
+    </ion-item>
+    <p class="danger" *ngIf="formGroup.controls.nome.dirty && formGroup.controls.nome.errors" margin-left>Nome inválido</p>
+    <ion-item>
+      <ion-label stacked>CPF*</ion-label>
+      <ion-input formControlName="cpf" type="text"></ion-input>
+    </ion-item>
+    <p class="danger" *ngIf="formGroup.controls.cpf.dirty && formGroup.controls.cpf.errors" margin-left>CPF inválido</p>
+    <ion-item>
+      <ion-label stacked>Email*</ion-label>
+      <ion-input formControlName="email" type="text"></ion-input>
+    </ion-item>
+    <p class="danger" *ngIf="formGroup.controls.email.dirty && formGroup.controls.email.errors" margin-left>Email inválido</p>
+    <ion-item>
+      <ion-label stacked>Senha*</ion-label>
+      <ion-input formControlName="senha" type="text"></ion-input>
+    </ion-item>
+    <p class="danger" *ngIf="formGroup.controls.senha.dirty && formGroup.controls.senha.errors" margin-left>Senha inválida</p>
+    <ion-item>
+      <ion-label>Instituição de ensino</ion-label>
+      <ion-select value="cimatec" multiple="false" placeholder="Selecione a instituição">
+        <ion-select-option value="cimatec">SENAI CIMATEC</ion-select-option>
+        <ion-select-option value="cetind">SENAI CETIND</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button block type="submit" [disabled]="formGroup.invalid" class="margin">Cadastrar</ion-button>
+  </form>
 </ion-content>
