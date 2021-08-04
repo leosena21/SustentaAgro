@@ -60,6 +60,7 @@ export class LoginPage implements OnInit {
     if(usuario!=null){
       if(usuario.email==this.formGroup.value.email && usuario.senha==this.formGroup.value.senha){
         this.alertService.simpleAlert("Login realizado");
+        this.navCtroller.navigateRoot("dashagro")
       }
       else{
         this.alertService.simpleAlert("Email ou senha incorretos");
@@ -70,6 +71,8 @@ export class LoginPage implements OnInit {
       if(professor!=null){
         if(professor.email==this.formGroup.value.email && professor.senha==this.formGroup.value.senha){
           this.alertService.simpleAlert("Login realizado");
+          this.navCtroller.navigateRoot("dashprof")
+
         }
         else{
           this.alertService.simpleAlert("Email ou senha incorretos");

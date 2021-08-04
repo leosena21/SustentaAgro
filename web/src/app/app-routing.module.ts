@@ -18,6 +18,14 @@ const routes: Routes = [
   {
     path: 'cadprof',
     loadChildren: () => import('./pages/cadprof/cadprof.module').then( m => m.CadprofPageModule)
+  },
+  {
+    path: 'dashagro',
+    loadChildren: () => import('./pages/dashagro/dashagro.module').then( m => m.DashagroPageModule)
+  },
+  {
+    path: 'dashprof',
+    loadChildren: () => import('./pages/dashprof/dashprof.module').then( m => m.DashprofPageModule)
   }
 ];
 
