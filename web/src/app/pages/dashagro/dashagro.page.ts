@@ -3,6 +3,7 @@ import { NavigationExtras } from '@angular/router';
 import { NavController } from '@ionic/angular';
 import { ColumnMode } from '@swimlane/ngx-datatable';
 import { praticaDTO } from 'src/app/models/pratica.dto';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-dashagro',
@@ -15,15 +16,27 @@ export class DashagroPage implements OnInit {
   columns = [{ prop: 'nome' }, { name: 'Descricao' }];
   ColumnMode = ColumnMode;
   selected = [];
+  pontos = 0;
 
 
   constructor(
     public navCtrl: NavController,
+    public storageService: StorageService,
   ) {
     this.gerarPratica();
    }
 
   ngOnInit() {
+  }
+
+  ionViewDidEnter(){
+    this.pontos = 0;
+    this.storageService.getRealizado().filter(realizado => realizado.agricultor.email==this.storageService.getUsuarioEmail()).forEach(element => {
+      if(element.avaliado){
+        this.pontos = this.pontos + Number.parseInt(element.pontuacao);
+      }
+    })
+
   }
 
   gerarPratica(){

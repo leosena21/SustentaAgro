@@ -40,7 +40,7 @@ export class PraticaPage implements OnInit {
       motivo: null,
       pontuacao: null,
       professor: null,
-      agricultor: this.storageService.getUsuarioEmail()
+      agricultor: this.storageService.getAgro().find(agro => agro.email==this.storageService.getUsuarioEmail())
     });
     
     this.alertService.editAlert(

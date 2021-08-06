@@ -71,7 +71,7 @@ export class LoginPage implements OnInit {
       let professor = this.storageService.getProfessor().find(usr => usr.email==this.formGroup.value.email);
       if(professor!=null){
         if(professor.email==this.formGroup.value.email && professor.senha==this.formGroup.value.senha){
-          this.storageService.setUsuarioEmail(usuario.email);
+          this.storageService.setUsuarioEmail(professor.email);
           this.alertService.simpleAlert("Login realizado");
           this.navCtroller.navigateRoot("dashprof")
 

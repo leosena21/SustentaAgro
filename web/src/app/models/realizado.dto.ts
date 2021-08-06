@@ -13,5 +13,5 @@ export interface realizadoDTO{
   alunos?: alunoDTO[];
   pratica: praticaDTO;
   professor?: professorDTO;
-  agricultor: string;
+  agricultor: agroDTO;
 }

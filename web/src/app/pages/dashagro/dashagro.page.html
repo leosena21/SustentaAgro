@@ -2,6 +2,9 @@
 
 
 <ion-content>
+  <ion-text color="primary" *ngIf="pontos>0">
+    <h1>Pontuação do agricultor: {{pontos}}</h1>
+  </ion-text>
   <div>
     <ngx-datatable
       class="material table"

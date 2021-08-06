@@ -4,21 +4,20 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { DashprofPageRoutingModule } from './dashprof-routing.module';
+import { ResumoPageRoutingModule } from './resumo-routing.module';
 
-import { DashprofPage } from './dashprof.page';
-import { ComponentsModule } from 'src/app/components/components.module';
+import { ResumoPage } from './resumo.page';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    DashprofPageRoutingModule,
-    ComponentsModule,
+    ResumoPageRoutingModule,
     NgxDatatableModule
   ],
-  declarations: [DashprofPage]
+  declarations: [ResumoPage]
 })
-export class DashprofPageModule {}
+export class ResumoPageModule {}

@@ -36,6 +36,14 @@ const routes: Routes = [
     path: 'pratica',
     loadChildren: () => import('./pages/pratica/pratica.module').then( m => m.PraticaPageModule),
     canActivate: [AuthService]
+  },
+  {
+    path: 'finalizar',
+    loadChildren: () => import('./pages/finalizar/finalizar.module').then( m => m.FinalizarPageModule)
+  },
+  {
+    path: 'resumo',
+    loadChildren: () => import('./pages/resumo/resumo.module').then( m => m.ResumoPageModule)
   }
 ];
 
