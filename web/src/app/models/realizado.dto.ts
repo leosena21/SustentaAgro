@@ -1,5 +1,7 @@
+import { agroDTO } from "./agro.dto";
 import { alunoDTO } from "./aluno.dto";
 import { etapaDTO } from "./etapa.dto";
+import { praticaDTO } from "./pratica.dto";
 import { professorDTO } from "./professor.dto";
 
 export interface realizadoDTO{
@@ -9,6 +11,7 @@ export interface realizadoDTO{
   conformidade?: boolean;
   avaliado: boolean;
   alunos?: alunoDTO[];
-  etapa: etapaDTO;
+  pratica: praticaDTO;
   professor?: professorDTO;
+  agricultor: string;
 }

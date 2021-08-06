@@ -1,9 +1,23 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>dashagro</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header title="Dash agricultor" [showMenuButton]="true"></app-header>
+
 
 <ion-content>
-
+  <div>
+    <ngx-datatable
+      class="material table"
+      [rows]="prticas"
+      [loadingIndicator]="loadingIndicator"
+      [columns]="columns"
+      [columnMode]="Force"
+      [headerHeight]="50"
+      [footerHeight]="50"
+      rowHeight="auto"
+      [reorderable]="reorderable"
+      [selected]="selected"
+      [selectionType]="single"
+      (activate)="onActivate($event)"
+      (select)="onSelect($event)"
+    >
+    </ngx-datatable>
+  </div>
 </ion-content>

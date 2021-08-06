@@ -86,4 +86,23 @@ export class StorageService{
     }
   }
 
+  getUsuarioEmail() : string{
+    let str = localStorage.getItem(STORAGE_KEYS.usuarioEmail);
+    if(str == null){
+      return null;
+    }
+    else{
+      return str;
+    }
+  }
+
+  setUsuarioEmail(obj : string){
+    if(obj == null){
+      localStorage.removeItem(STORAGE_KEYS.usuarioEmail);
+    }
+    else{
+      localStorage.setItem(STORAGE_KEYS.usuarioEmail, obj);
+    }
+  }
+
 }

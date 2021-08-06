@@ -59,6 +59,7 @@ export class LoginPage implements OnInit {
     let usuario = this.storageService.getAgro().find(usr => usr.email==this.formGroup.value.email);
     if(usuario!=null){
       if(usuario.email==this.formGroup.value.email && usuario.senha==this.formGroup.value.senha){
+        this.storageService.setUsuarioEmail(usuario.email);
         this.alertService.simpleAlert("Login realizado");
         this.navCtroller.navigateRoot("dashagro")
       }
@@ -70,6 +71,7 @@ export class LoginPage implements OnInit {
       let professor = this.storageService.getProfessor().find(usr => usr.email==this.formGroup.value.email);
       if(professor!=null){
         if(professor.email==this.formGroup.value.email && professor.senha==this.formGroup.value.senha){
+          this.storageService.setUsuarioEmail(usuario.email);
           this.alertService.simpleAlert("Login realizado");
           this.navCtroller.navigateRoot("dashprof")
 

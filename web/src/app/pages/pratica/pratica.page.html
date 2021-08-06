@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>pratica</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="center">
+    <img class="img" src="https://blog.livup.com.br/wp-content/uploads/2019/01/consumo-sustentavel.jpg" />
+    <ion-card-header>
+      <ion-card-subtitle>Destination</ion-card-subtitle>
+      <ion-card-title>Madison, WI</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the Wisconsin Territory in 1836.
+    </ion-card-content>
+  </ion-card>
+  <ion-list class="center">
+    <ion-text color="primary">
+      Marque as práticas já realizadas na sua propriedade.
+    </ion-text>
+    <ion-item *ngFor="let passo of pratica.passos">
+      <ion-label>{{passo.nome}}</ion-label>
+      <ion-checkbox slot="start" [(ngModel)]="passo.isChecked"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="handleSave()" expand="block" fill="clear" shape="round">
+    Enviar
+  </ion-button>
+</ion-content>
