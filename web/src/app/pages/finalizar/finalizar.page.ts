@@ -65,7 +65,7 @@ export class FinalizarPage implements OnInit {
       this.realizado.conformidade = this.isOk;
       this.realizado.avaliado = true;
       this.realizado.dt_realizado = this.formGroup.value.data;
-      this.realizado.motivo = this.formGroup.value.motivo;
+      this.realizado.motivo = isNullOrUndefined(this.formGroup.value.motivo)? "Em conformidade com as práticas sustentáveis" : this.formGroup.value.motivo;
       this.realizado.alunos.push(
         {
           nome: this.formGroup.value.aluno,
