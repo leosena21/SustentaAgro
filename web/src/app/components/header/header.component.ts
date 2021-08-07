@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MenuController } from '@ionic/angular';
+import { MenuController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-header',
@@ -10,9 +10,11 @@ export class HeaderComponent implements OnInit {
 
   @Input() title: string;
   @Input() showMenuButton: boolean;
+  @Input() showBackButton: boolean;
 
   constructor(
-    private menuController: MenuController
+    private menuController: MenuController,
+    private navCtrl: NavController,
   ) { }
 
   ngOnInit() {}
@@ -26,6 +28,10 @@ export class HeaderComponent implements OnInit {
         this.menuController.open();
       }
     })
+  }
+
+  handleBack(){
+    this.navCtrl.back();
   }
 
 }

@@ -12,5 +12,36 @@
 }
 
 .grid {
-  display: grid;
+  display: inline-grid;
+  margin-top: 5%;
+}
+
+.element {
+  text-align: start;
+  margin-top: 2%;
+}
+
+ion-input {
+  background: #ffff;
+  border-radius: 10px;
+  margin-top: 1%;
+}
+
+ion-content {
+  --background: #3b5627;
+}
+
+ion-label {
+  color: #ffff;
+}
+
+.login {
+  --background: #70a349;
+}
+
+.create {
+  color: #fff;
+  --border-color: #a5f06c;
+  --background-activated: #fff;
+  --background-focused: #595259;
 }

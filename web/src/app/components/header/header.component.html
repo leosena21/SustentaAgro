@@ -1,5 +1,10 @@
-<ion-header [translucent]="true" class="ion-no-border">
+<ion-header [translucent]="true" class="ion-no-border ">
   <ion-toolbar>
+    <ion-buttons slot="start" *ngIf="showBackButton" class="btnmenu">
+      <ion-button (click)="handleBack()" class="btnmenu">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-buttons slot="start" *ngIf="showMenuButton" class="btnmenu">
       <ion-button (click)="handleMenu()" class="btnmenu">
         <ion-icon name="menu-outline" class="btnmenu"></ion-icon>
