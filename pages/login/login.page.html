@@ -1,0 +1,20 @@
+<app-header title="Login" [showMenuButton]="false"></app-header>
+
+<ion-content>
+  <form [formGroup]="formGroup" (ngSubmit)="handleLogin(); $event.preventDefault()" class="form">
+    <ion-item>
+      <ion-label stacked>Email*</ion-label>
+      <ion-input formControlName="email" type="text"></ion-input>
+    </ion-item>
+    <p class="danger" *ngIf="formGroup.controls.email.dirty && formGroup.controls.email.errors" margin-left>Email inválido</p>
+    <ion-item>
+      <ion-label stacked>Senha*</ion-label>
+      <ion-input formControlName="senha" type="text"></ion-input>
+    </ion-item>
+    <p class="danger" *ngIf="formGroup.controls.senha.dirty && formGroup.controls.senha.errors" margin-left>Senha inválida</p>
+    <div class="grid">
+      <ion-button block type="submit" [disabled]="formGroup.invalid" class="margin">Login</ion-button>
+      <ion-button block class="margin"(click)="handleCad()">Criar conta</ion-button>
+    </div>
+  </form>
+</ion-content>
