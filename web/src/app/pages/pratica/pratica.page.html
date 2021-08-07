@@ -6,13 +6,12 @@
 
 <ion-content>
   <ion-card class="center">
-    <img class="img" src="https://blog.livup.com.br/wp-content/uploads/2019/01/consumo-sustentavel.jpg" />
+    <img class="img" src="{{pratica.url}}" />
     <ion-card-header>
-      <ion-card-subtitle>Destination</ion-card-subtitle>
-      <ion-card-title>Madison, WI</ion-card-title>
+      <ion-card-title>{{pratica.nome}}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the Wisconsin Territory in 1836.
+      {{pratica.descricao}}
     </ion-card-content>
   </ion-card>
   <ion-list class="center">

@@ -24,6 +24,8 @@ export class DashagroPage implements OnInit {
     public storageService: StorageService,
   ) {
     this.gerarPratica();
+    this.storageService.setPratica([]);
+    this.storageService.setPratica(this.prticas);
    }
 
   ngOnInit() {
@@ -43,17 +45,17 @@ export class DashagroPage implements OnInit {
     this.prticas.push({
       nome: "Plantio direto",
       descricao: "descrição", 
-      url:"https://blog.livup.com.br/wp-content/uploads/2019/01/consumo-sustentavel.jpg",
+      url:"https://blogs.canalrural.com.br/embrapasoja/wp-content/uploads/sites/32/2016/11/HDRRR0001_20091221_0546.jpg",
       passos: [
         {
           id:1,
-          nome: "Colheita abc",
+          nome: "Colheita e distribuição dos restos da cultura antecessora para formação da palhada;",
           descricao: "descricao pratica",
           isChecked: false
         },
         {
           id:2,
-          nome: "passo2 abc",
+          nome: "Não realizou Gradagem ou aração do solo.",
           descricao: "descricao pratica2",
           isChecked: false
         }
@@ -62,17 +64,36 @@ export class DashagroPage implements OnInit {
     this.prticas.push({
       nome: "Descarte de embalagem de agroquimico",
       descricao: "descrição", 
-      url:"https://blog.livup.com.br/wp-content/uploads/2019/01/consumo-sustentavel.jpg",
+      url:"https://i1.wp.com/blog.aegro.com.br/wp-content/uploads/2020/11/descarte-de-embalagem-de-agrotoxicos.jpg",
       passos: [
         {
           id:1,
-          nome: "Descarte abc",
+          nome: "Tríplice lavagem ou lavagem de alta pressão;",
           descricao: "descricao Descarte",
           isChecked: false
         },
         {
           id:2,
-          nome: "Descarte2 abc",
+          nome: "Inutilizar as embalagens e entregar a uma unidade de recebimento.",
+          descricao: "descricao Descarte2",
+          isChecked: false
+        }
+      ]
+    });
+    this.prticas.push({
+      nome: "Rotação de cultura",
+      descricao: "descrição", 
+      url:"https://irrigat.com.br/wp-content/uploads/esquema-de-rotacao-de-culturas.jpg",
+      passos: [
+        {
+          id:1,
+          nome: "Sucessão de culturas;",
+          descricao: "descricao Descarte",
+          isChecked: false
+        },
+        {
+          id:2,
+          nome: "Uso de leguminosas como adubo verde e cobertura de solo.",
           descricao: "descricao Descarte2",
           isChecked: false
         }
