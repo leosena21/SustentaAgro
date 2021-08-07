@@ -3,7 +3,7 @@
 
 <ion-content>
   <form [formGroup]="formGroup" (ngSubmit)="handleCad(); $event.preventDefault()" class="form">
-    <ion-label>Cadastro do agricultor</ion-label>
+    <ion-label class="header">CADASTRO AGRICULTOR</ion-label>
     <div class="element">
       <ion-label>Nome*</ion-label>
       <ion-input formControlName="nome" type="text"></ion-input>
@@ -29,6 +29,6 @@
       <ion-input formControlName="senha" type="text"></ion-input>
       <p class="danger" *ngIf="formGroup.controls.senha.dirty && formGroup.controls.senha.errors" margin-left>Senha inválida</p>
     </div>
-    <ion-button block type="submit" [disabled]="formGroup.invalid" class="margin">Cadastrar</ion-button>
+    <ion-button block type="submit" [disabled]="formGroup.invalid" class="margin btn">Cadastrar</ion-button>
   </form>
 </ion-content>

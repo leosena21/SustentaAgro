@@ -23,5 +23,19 @@ ion-input {
 }
 
 ion-content {
-  --background: #fafafa;
+  --background: #3b5627;
+}
+
+ion-label {
+  color: #ffff;
+}
+
+.header {
+  font-family: monospace;
+  font-size: x-large;
+  text-decoration: underline;
+}
+
+.btn {
+  --background: #70a349;
 }

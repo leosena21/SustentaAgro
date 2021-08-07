@@ -10,3 +10,39 @@
 .margin {
   margin-top: 2%;
 }
+
+.element {
+  text-align: start;
+  margin-top: 2%;
+}
+
+ion-input {
+  background: #ffff;
+  border-radius: 10px;
+  margin-top: 1%;
+}
+
+ion-content {
+  --background: #3b5627;
+}
+
+ion-label {
+  color: #ffff;
+}
+
+ion-select {
+  color: #000;
+  background: #fff;
+  border-radius: 10px;
+  margin-top: 1%;
+}
+
+.btn {
+  --background: #70a349;
+}
+
+.header {
+  font-family: monospace;
+  font-size: x-large;
+  text-decoration: underline;
+}
