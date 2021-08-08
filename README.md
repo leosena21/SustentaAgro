@@ -19,5 +19,5 @@ O projeto SustentaAgro foi desenvolvimento utilizando IONIC jutamente com o Type
 Para inicializar o projeto é preciso utilizar o comando abaixo:
 
 
-### `yarn start`
+### `npm install`
 ### `ionic cordova run browser`
