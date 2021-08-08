@@ -13,7 +13,7 @@ import { StorageService } from 'src/app/services/storage.service';
 export class DashagroPage implements OnInit {
 
   prticas: praticaDTO[] = [];
-  columns = [{ prop: 'nome' }, { name: 'Descricao' }];
+  columns = [{ prop: 'nome', width: 250 }, { name: 'Descricao', width: 650 }];
   ColumnMode = ColumnMode;
   selected = [];
   pontos = 0;
@@ -44,7 +44,7 @@ export class DashagroPage implements OnInit {
   gerarPratica(){
     this.prticas.push({
       nome: "Plantio direto",
-      descricao: "descrição", 
+      descricao: "Neste sistema o plantio é realizado sem que haja aração ou gradagem prévia do solo, sendo a semente colocada no solo não revolvido e o plantio realizado por plantadeiras que abrem um pequeno sulco de profundidade e largura suficientes para garantir boa cobertura e contato da semente com o solo, permitindo a germinação da mesma. - EMBRAPA", 
       url:"https://blogs.canalrural.com.br/embrapasoja/wp-content/uploads/sites/32/2016/11/HDRRR0001_20091221_0546.jpg",
       passos: [
         {
@@ -63,7 +63,7 @@ export class DashagroPage implements OnInit {
     });
     this.prticas.push({
       nome: "Descarte de embalagem de agroquimico",
-      descricao: "descrição", 
+      descricao: "É a correta destinação final às embalagens vazias dos agrotóxicos utilizados na agricultura. - EMBRAPA", 
       url:"https://i1.wp.com/blog.aegro.com.br/wp-content/uploads/2020/11/descarte-de-embalagem-de-agrotoxicos.jpg",
       passos: [
         {
@@ -82,7 +82,7 @@ export class DashagroPage implements OnInit {
     });
     this.prticas.push({
       nome: "Rotação de cultura",
-      descricao: "descrição", 
+      descricao: "É a alternância de culturas numa dada área agrícola. Procura-se com esta prática o melhor aproveitamento da fertilidade do solo pelo aprofundamento diferenciado das raízes, a melhoria da drenagem, a diversidade biológica e o controle de pragas e doenças. - EMBRAPA", 
       url:"https://irrigat.com.br/wp-content/uploads/esquema-de-rotacao-de-culturas.jpg",
       passos: [
         {

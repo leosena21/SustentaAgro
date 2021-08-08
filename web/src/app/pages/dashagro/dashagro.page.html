@@ -1,10 +1,20 @@
-<app-header title="Dash agricultor" [showMenuButton]="true"></app-header>
+<!-- <app-header title="DASH AGRICULTOR" [showMenuButton]="true" [showBackButton]="false"></app-header> -->
 
 
 <ion-content>
-  <ion-text color="primary" *ngIf="pontos>0">
-    <h1>Pontuação do agricultor: {{pontos}}</h1>
-  </ion-text>
+  <div class="center">
+    <img src="assets/logo.png" alt="" class="img">
+  </div>
+
+  <div class="grid">
+    <ion-text color="primary" class="text">
+      DASH AGRICULTOR
+    </ion-text>
+    <ion-text color="primary" *ngIf="pontos>0" class="pts">
+      Pontuação do agricultor: {{pontos}}
+    </ion-text>
+  </div>
+
   <div>
     <ngx-datatable
       class="material table"
