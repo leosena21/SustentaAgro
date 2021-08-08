@@ -10,6 +10,9 @@
     <ion-text color="primary" *ngIf="pontos>0" class="pts">
       Pontuação do agricultor: {{pontos}}
     </ion-text>
+    <ion-button (click)="handleHistorico()" fill="outline" shape="round" class="historico" *ngIf="pontos>0">
+      Histórico
+    </ion-button>
   </div>
 
   <div>

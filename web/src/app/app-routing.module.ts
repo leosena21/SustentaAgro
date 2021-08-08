@@ -14,13 +14,11 @@ const routes: Routes = [
   },
   {
     path: 'cadagro',
-    loadChildren: () => import('./pages/cadagro/cadagro.module').then( m => m.CadagroPageModule),
-    canActivate: [AuthService]
+    loadChildren: () => import('./pages/cadagro/cadagro.module').then( m => m.CadagroPageModule)
   },
   {
     path: 'cadprof',
-    loadChildren: () => import('./pages/cadprof/cadprof.module').then( m => m.CadprofPageModule),
-    canActivate: [AuthService]
+    loadChildren: () => import('./pages/cadprof/cadprof.module').then( m => m.CadprofPageModule)
   },
   {
     path: 'dashagro',
@@ -39,11 +37,15 @@ const routes: Routes = [
   },
   {
     path: 'finalizar',
-    loadChildren: () => import('./pages/finalizar/finalizar.module').then( m => m.FinalizarPageModule)
+    loadChildren: () => import('./pages/finalizar/finalizar.module').then( m => m.FinalizarPageModule),
+    canActivate: [AuthService]
+
   },
   {
     path: 'resumo',
-    loadChildren: () => import('./pages/resumo/resumo.module').then( m => m.ResumoPageModule)
+    loadChildren: () => import('./pages/resumo/resumo.module').then( m => m.ResumoPageModule),
+    canActivate: [AuthService]
+
   }
 ];
 

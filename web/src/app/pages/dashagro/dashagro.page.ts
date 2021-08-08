@@ -115,4 +115,8 @@ export class DashagroPage implements OnInit {
     this.navCtrl.navigateForward("pratica", navigationExtras);
   }
 
+  handleHistorico(){
+    this.navCtrl.navigateForward("resumo");
+  }
+
 }

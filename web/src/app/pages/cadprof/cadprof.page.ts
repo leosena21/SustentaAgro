@@ -37,7 +37,7 @@ export class CadprofPage implements OnInit {
 
   handleCad(){
     let usuario = this.formGroup.value as professorDTO;
-    let agros = this.storageService.getAgro();
+    let agros = this.storageService.getAgro()==null ? [] : this.storageService.getAgro();
     let profs = this.storageService.getProfessor()==null ? [] : this.storageService.getProfessor();
     if(agros.find(agro => agro.email==this.formGroup.value.email)==null && profs.find(prof => prof.email==this.formGroup.value.email)==null){
       profs.push(usuario);

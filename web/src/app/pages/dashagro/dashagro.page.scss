@@ -24,6 +24,8 @@ ion-content {
   color: #ffff;
   text-decoration: underline;
   font-size: x-large;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 .pts {
@@ -33,5 +35,11 @@ ion-content {
 }
 
 .grid {
-  display: grid;
+  display: inline-grid;
+}
+
+.historico {
+  --border-color: #ffff;
+  color: #ffff;
+  margin-top: 10%;
 }

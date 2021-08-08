@@ -1,27 +1,26 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>resumo</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <div>
-    <ngx-datatable
-      class="material table"
-      [rows]="realizados"
-      [loadingIndicator]="loadingIndicator"
-      [columns]="columns"
-      [columnMode]="Force"
-      [headerHeight]="50"
-      [footerHeight]="50"
-      rowHeight="auto"
-      [reorderable]="reorderable"
-      
-      [selected]="selected"
-      [selectionType]="single"
-      (activate)="onActivate($event)"
-      (select)="onSelect($event)"
-    >
-  </ngx-datatable>
+  <div class="margin">
+    <ion-text color="primary" class="text">
+      HISTÓRICO DE PRÁTICAS AVALIADAS:
+    </ion-text>
+    <div>
+      <ngx-datatable
+        class="material table"
+        [rows]="realizados"
+        [loadingIndicator]="loadingIndicator"
+        [columns]="columns"
+        [columnMode]="Force"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        rowHeight="auto"
+        [reorderable]="reorderable"
+        
+        [selected]="selected"
+        [selectionType]="single"
+        (activate)="onActivate($event)"
+        (select)="onSelect($event)"
+      >
+    </ngx-datatable>
+    </div>
   </div>
 </ion-content>

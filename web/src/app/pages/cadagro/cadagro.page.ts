@@ -40,7 +40,7 @@ export class CadagroPage implements OnInit {
     let usuario = this.formGroup.value as agroDTO;
     usuario.pontuacao = 0;
     let agros = this.storageService.getAgro()==null ? [] : this.storageService.getAgro();
-    let profs = this.storageService.getProfessor();
+    let profs = this.storageService.getProfessor()==null ? [] : this.storageService.getProfessor();
     if(agros.find(agro => agro.email==this.formGroup.value.email)==null && profs.find(prof => prof.email==this.formGroup.value.email)==null){
       agros.push(usuario);
       this.storageService.setAgro(agros);
