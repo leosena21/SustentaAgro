@@ -1,9 +1,3 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>pratica</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
   <ion-card class="center">
     <img class="img" src="{{pratica.url}}" />
@@ -23,7 +17,7 @@
       <ion-checkbox slot="start" [(ngModel)]="passo.isChecked"></ion-checkbox>
     </ion-item>
   </ion-list>
-  <ion-button (click)="handleSave()" expand="block" fill="clear" shape="round">
+  <ion-button (click)="handleSave()" fill="outline" shape="round" class="btn">
     Enviar
   </ion-button>
 </ion-content>

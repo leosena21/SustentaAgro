@@ -1,10 +1,23 @@
 .center {
   width: 50%;
   margin: auto;
-  margin-top: 2%;
+  padding-top: 2%;
+  text-align: center;
 }
 
 .img {
   margin: auto;
   display: block;
+  width: 75%;
+}
+
+ion-content {
+  --background: #3b5627;
+  text-align: center;
+}
+
+.btn {
+  border-radius: 10px;
+  --border-color: #ffff;
+  margin-top: 2%;
 }
