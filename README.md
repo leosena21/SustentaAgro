@@ -15,8 +15,8 @@
 
 ## Desenvolvimento
 
-O projeto SustentaAgro foi desenvolvimento utilizando IONIC jutamente com o Typescript, além de utilizar HTML e CSS para toda a estrutura da página.<br />
-Para inicializar o projeto é preciso utilizar o comando abaixo:
+O projeto SustentaAgro foi desenvolvido utilizando IONIC jutamente com o Typescript, além de utilizar HTML e CSS para toda a estrutura da página.<br />
+Para inicializar o projeto é preciso utilizar os comandos abaixo:
 
 
 ### `npm install`
