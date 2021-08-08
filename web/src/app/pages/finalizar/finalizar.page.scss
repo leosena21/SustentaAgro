@@ -7,6 +7,46 @@
   transform: translate(-50%, -50%);
 }
 
+.element {
+  text-align: start;
+  margin-top: 2%;
+}
+
+ion-input {
+  background: #ffff;
+  border-radius: 10px;
+  margin-top: 1%;
+}
+
 .margin {
   margin-top: 2%;
+}
+
+ion-content {
+  --background: #3b5627;
+  text-align: center;
+}
+
+ion-label {
+  color: #ffff;
+}
+
+.list {
+  width: 50%;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.border {
+  border-radius: 10px;
+}
+
+.content {
+  background: #ffff;
+}
+
+.text {
+  color: #ffff;
+  font-size: x-large;
 }

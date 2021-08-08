@@ -3,3 +3,29 @@
   margin: auto;
   margin-top: 5%;
 }
+
+.center {
+  text-align: center;
+  background-color: #3b5627;
+  margin-bottom: 2%;
+}
+
+.img {
+  width: 15%;
+}
+
+.text {
+  color: #ffff;
+  text-decoration: underline;
+  font-size: x-large;
+}
+
+.grid {
+  display: grid;
+}
+
+ion-content {
+  --background: #70a349;
+  --background: linear-gradient(#3b5627, #70a349);
+  text-align: center;
+}

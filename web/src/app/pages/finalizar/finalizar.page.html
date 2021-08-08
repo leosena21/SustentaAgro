@@ -1,15 +1,9 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>finalizar</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
   <div>
     <ion-text color="primary">
       <h1>Práticas realizadas pelo agricultor:</h1>
     </ion-text>
-    <ion-list>
+    <ion-list class="list">
       <ion-item *ngFor="let passo of passos">
         <ion-label>{{passo.nome}}</ion-label>
       </ion-item>
@@ -17,39 +11,42 @@
   </div>
     
   <form [formGroup]="formGroup" (ngSubmit)="handleCad(); $event.preventDefault()" class="form">
-    <ion-item>
-      <ion-label stacked>Data*</ion-label>
+    <ion-text color="primary" class="text">
+      Relatório da prática
+    </ion-text>
+    <div class="element">
+      <ion-label>Data da visita*</ion-label>
       <ion-input formControlName="data" type="text"></ion-input>
-    </ion-item>
+    </div>
     <p class="danger" *ngIf="formGroup.controls.data.dirty && formGroup.controls.data.errors" margin-left>Necessário preenchimento</p>
     <ion-radio-group value="true" (ionChange)="changeValue()">
       <ion-list-header>
-        <ion-label>Em conformidade com as práticas sustentáveis</ion-label>
+        <ion-label>Em conformidade com as práticas sustentáveis?</ion-label>
       </ion-list-header>
   
-      <ion-item>
+      <ion-item class="border">
         <ion-label>Sim</ion-label>
         <ion-radio slot="start" value="true"></ion-radio>
       </ion-item>
   
-      <ion-item>
+      <ion-item class="border">
         <ion-label>Não</ion-label>
         <ion-radio slot="start" value="false"></ion-radio>
       </ion-item>
     </ion-radio-group>
-    <ion-item *ngIf="isOk==false">
-      <ion-label stacked>Motivo da não conformidade*</ion-label>
+    <div class="element" *ngIf="isOk==false">
+      <ion-label>Motivo da não conformidade*</ion-label>
       <ion-input formControlName="motivo" type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label stacked>Aluno</ion-label>
+    </div>
+    <div class="element">
+      <ion-label>Aluno</ion-label>
       <ion-input formControlName="aluno" type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label stacked>Pontuacao*</ion-label>
+    </div>
+    <div class="element">
+      <ion-label>Pontuacao*</ion-label>
       <ion-input formControlName="pontuacao" type="text"></ion-input>
-    </ion-item>
-    <p class="danger" *ngIf="formGroup.controls.pontuacao.dirty && formGroup.controls.pontuacao.errors" margin-left>Necessário preenchimento</p>
+      <p class="danger" *ngIf="formGroup.controls.pontuacao.dirty && formGroup.controls.pontuacao.errors" margin-left>Necessário preenchimento</p>
+    </div>
     <ion-button block type="submit" [disabled]="formGroup.invalid" class="margin">Salvar</ion-button>
   </form>
 </ion-content>
