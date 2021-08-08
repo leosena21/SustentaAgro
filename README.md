@@ -8,16 +8,6 @@
 
 O SustentaAgro é plataforma tecnológica para a capacitação dos agricultores em práticas sustentáveis. Após adoção dessas práticas, a comunidade acadêmica será responsável por realizar visitas de campo para avaliar o cumprimento das práticas sustentáveis e sugerir melhorias. 
 
-Dessa forma, temos as seguintes propstas de valor:
-
-- Engajamento de agricultores na implementação de práticas sustentáveis;
-- Intermediação entre agricultores e comunidade acadêmica para fiscalização das práticas;
-- Fornecer para a comunidade academia um ambiente para aulas práticas/visita técnica;
-- Dar visibilidade (mercado, credores, sociedade) a agricultores que fizeram adoção das práticas sustentáveis para obtenção de futuros benefícios (certificações ambientais,    acesso à crédito);
-- Agregação de valor ao produto comercializado;
--Preservação do meio ambiente; Formação de profissionais com práticas sustentáveis para atuar no mercado de trabalho; Cumprimento de agendas ambientais (ODS).
-
-
 ## Time
 
 - [Ernando Donato](https://www.linkedin.com/in/ernando-donato/)
