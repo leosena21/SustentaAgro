@@ -6,7 +6,7 @@
 
 ## Sobre
 
-O SustentaAgro é plataforma tecnológica para a capacitação dos agricultores em práticas sustentáveis. Após adoção dessas práticas, a comunidade acadêmica será responsável por realizar visitas de campo para avaliar o cumprimento das práticas sustentáveis e sugerir melhorias. 
+O SustentaAgro é uma plataforma tecnológica para a capacitação dos agricultores em práticas sustentáveis. Após adoção dessas práticas, a comunidade acadêmica será responsável por realizar visitas de campo para avaliar o cumprimento das práticas sustentáveis e sugerir melhorias. 
 
 ## Time
 
